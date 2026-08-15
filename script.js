@@ -14,6 +14,23 @@ document.querySelectorAll('#mobileMenu a').forEach((link) => {
   });
 });
 
+document.querySelectorAll('[data-resume-link]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const resumeUrl = link.href;
+    window.open(resumeUrl, '_blank', 'noopener,noreferrer');
+
+    const downloadLink = document.createElement('a');
+    downloadLink.href = resumeUrl;
+    downloadLink.download = 'Nainika-Kaware-Resume.pdf';
+    downloadLink.style.display = 'none';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    downloadLink.remove();
+  });
+});
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
