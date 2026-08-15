@@ -1,77 +1,207 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nainika Kaware — finance-minded data analyst portfolio." />
-  <title>Nainika Kaware — Finance & Data Analytics</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: {
-        colors: { ink: '#14231e', navy: '#122b35', sage: '#9fb6a5', lime: '#d4ef72', paper: '#f6f7f2', line: '#dfe5dc' },
-        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'], display: ['DM Sans', 'ui-sans-serif', 'system-ui'], mono: ['IBM Plex Mono', 'ui-monospace'] }
-      }}
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    html { scroll-behavior: smooth; }
-    body { background: #f6f7f2; color: #14231e; }
-    .grid-paper { background-image: linear-gradient(#e8ece5 1px, transparent 1px), linear-gradient(90deg, #e8ece5 1px, transparent 1px); background-size: 28px 28px; }
-    .fade-up { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
-    .fade-up.show { opacity: 1; transform: translateY(0); }
-    .bar { transform-origin: bottom; animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
-    @keyframes rise { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-    .nav-shadow { box-shadow: 0 8px 24px rgba(20,35,30,.06); }
-  </style>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Nainika Kaware — finance-minded data analyst portfolio."/>
+    <title>Nainika Kaware — Finance & Data Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: { extend: {
+            colors: { ink: '#14231e', navy: '#122b35', sage: '#9fb6a5', lime: '#d4ef72', paper: '#f6f7f2', line: '#dfe5dc' },
+            fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'], display: ['DM Sans', 'ui-sans-serif', 'system-ui'], mono: ['IBM Plex Mono', 'ui-monospace'] }
+          }}
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background: #f6f7f2; color: #14231e; }
+        .grid-paper { background-image: linear-gradient(#e8ece5 1px, transparent 1px), linear-gradient(90deg, #e8ece5 1px, transparent 1px); background-size: 28px 28px; }
+        .fade-up { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+        .fade-up.show { opacity: 1; transform: translateY(0); }
+        .bar { transform-origin: bottom; animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
+        @keyframes rise { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+        .nav-shadow { box-shadow: 0 8px 24px rgba(20,35,30,.06); }
+    </style>
 </head>
 <body class="font-sans antialiased selection:bg-lime selection:text-ink">
-  <header id="top" class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-paper/90 backdrop-blur-md">
+<header id="top" class="fixed inset-x-0 top-0 z-50 border-b border-line/80 bg-paper/90 backdrop-blur-md">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10" aria-label="Primary navigation">
-      <a href="#top" class="font-display text-lg font-bold tracking-tight">NK<span class="text-sage">.</span></a>
-      <div class="hidden items-center gap-8 text-sm font-medium text-ink/65 md:flex">
-        <a href="#about" class="transition hover:text-ink">About</a><a href="#experience" class="transition hover:text-ink">Experience</a><a href="#work" class="transition hover:text-ink">Selected work</a><a href="#contact" class="transition hover:text-ink">Contact</a>
-      </div>
-      <a href="mailto:nainikapkaware19@gmail.com" class="hidden rounded-full bg-ink px-4 py-2 text-xs font-semibold text-white transition hover:bg-navy sm:block">Let's connect <span class="ml-1 text-lime">↗</span></a>
-      <button id="menuButton" class="rounded-full border border-line p-2 md:hidden" aria-label="Open menu" aria-expanded="false"><span class="text-xl">☰</span></button>
+        <a href="#top" class="font-display text-lg font-bold tracking-tight">Nainika Kaware<span class="text-sage">.</span></a>
+        <div class="hidden items-center gap-8 text-sm font-medium text-ink/65 md:flex">
+            <a href="#about" class="transition hover:text-ink">About</a><a href="#experience"
+                                                                           class="transition hover:text-ink">Experience</a><a
+                href="#work" class="transition hover:text-ink">Selected work</a><a href="#contact"
+                                                                                   class="transition hover:text-ink">Contact</a><a href="assets/Nainika%20Kaware%20Resume%20Mid%202026.pdf" target="_blank" rel="noopener" download="Nainika-Kaware-Resume.pdf"
+                                                                                   class="transition hover:text-ink">Resume</a>
+        </div>
+        <a href="mailto:nainikapkaware19@gmail.com"
+           class="hidden rounded-full bg-ink px-4 py-2 text-xs font-semibold text-white transition hover:bg-navy sm:block">Let's
+            connect <span class="ml-1 text-lime">↗</span></a>
+        <button id="menuButton" class="rounded-full border border-line p-2 md:hidden" aria-label="Open menu"
+                aria-expanded="false"><span class="text-xl">☰</span></button>
     </nav>
-    <div id="mobileMenu" class="hidden border-t border-line bg-paper px-6 py-4 md:hidden"><div class="flex flex-col gap-4 text-sm font-medium"><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Selected work</a><a href="#contact">Contact</a></div></div>
-  </header>
+    <div id="mobileMenu" class="hidden border-t border-line bg-paper px-6 py-4 md:hidden">
+        <div class="flex flex-col gap-4 text-sm font-medium"><a href="#about">About</a><a
+                href="#experience">Experience</a><a href="#work">Selected work</a><a href="#contact">Contact</a><a href="assets/Nainika%20Kaware%20Resume%20Mid%202026.pdf" target="_blank" rel="noopener" download="Nainika-Kaware-Resume.pdf">Resume</a></div>
+    </div>
+</header>
 
-  <main>
+<main>
     <section class="grid-paper relative overflow-hidden border-b border-line pt-36 lg:pt-44">
-      <div class="mx-auto grid max-w-7xl gap-14 px-6 pb-20 lg:grid-cols-[1.1fr_.9fr] lg:px-10 lg:pb-28">
-        <div class="fade-up self-end">
-          <p class="mb-7 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[.2em] text-ink/55"><span class="h-2 w-2 rounded-full bg-lime ring-4 ring-lime/30"></span> Finance × Data × Decisions</p>
-          <h1 class="max-w-3xl font-display text-5xl font-semibold leading-[.98] tracking-[-.06em] text-ink sm:text-7xl lg:text-[6.8rem]">Numbers that<br><span class="text-sage">move people</span><span class="text-ink">.</span></h1>
-          <p class="mt-8 max-w-xl text-base leading-7 text-ink/65 sm:text-lg">I’m Nainika Kaware, a data analyst turning complex information into clear, decision-ready stories for modern teams.</p>
-          <div class="mt-9 flex flex-wrap items-center gap-4"><a href="#work" class="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy">Explore my work <span class="ml-2 text-lime">↓</span></a><a href="mailto:nainikapkaware19@gmail.com" class="text-sm font-semibold underline decoration-sage decoration-2 underline-offset-4 hover:text-sage">Get in touch</a></div>
+        <div class="mx-auto grid max-w-7xl gap-14 px-6 pb-20 lg:grid-cols-[1.1fr_.9fr] lg:px-10 lg:pb-28">
+            <div class="fade-up self-end">
+                <p class="mb-7 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[.2em] text-ink/55">
+                    <span class="h-2 w-2 rounded-full bg-lime ring-4 ring-lime/30"></span> Finance × Data × Decisions
+                </p>
+                <h1 class="max-w-3xl font-display text-5xl font-semibold leading-[.98] tracking-[-.06em] text-ink sm:text-7xl lg:text-[6.8rem]">
+                    Numbers that<br><span class="text-sage">move people</span><span class="text-ink">.</span></h1>
+                <p class="mt-8 max-w-xl text-base leading-7 text-ink/65 sm:text-lg">I’m Nainika Kaware, a Data Analyst with 2.5 years of experience turning complex information into clear, decision-ready business insights as I move toward a career in Finance.</p>
+                <div class="mt-9 flex flex-wrap items-center gap-4"><a href="#work"
+                                                                       class="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy">Explore
+                    my work <span class="ml-2 text-lime">↓</span></a><a href="mailto:nainikapkaware19@gmail.com"
+                                                                        class="text-sm font-semibold underline decoration-sage decoration-2 underline-offset-4 hover:text-sage">Get
+                    in touch</a></div>
+            </div>
+            <div class="fade-up relative flex min-h-[360px] items-center justify-center lg:min-h-[470px]">
+                <div class="absolute right-4 top-6 h-64 w-64 rounded-full bg-lime/55 blur-3xl"></div>
+                <div class="relative w-full max-w-[430px] rounded-[2rem] border border-white/80 bg-navy p-6 shadow-2xl shadow-navy/20 sm:p-8">
+                    <div class="flex items-start justify-between">
+                        <div><p class="font-mono text-[10px] uppercase tracking-[.2em] text-white/50">Portfolio /
+                            2026</p>
+                            <p class="mt-2 text-2xl font-semibold tracking-tight text-white">Signal over noise.</p>
+                        </div>
+                        <div class="rounded-full bg-lime px-3 py-1 font-mono text-[10px] font-semibold text-ink">+
+                            clarity
+                        </div>
+                    </div>
+                    <div class="mt-12 flex h-40 items-end gap-2 border-b border-white/15 px-1 pb-0">
+                        <div class="bar h-[28%] flex-1 rounded-t bg-white/20" style="animation-delay:.05s"></div>
+                        <div class="bar h-[42%] flex-1 rounded-t bg-white/30" style="animation-delay:.1s"></div>
+                        <div class="bar h-[38%] flex-1 rounded-t bg-white/25" style="animation-delay:.15s"></div>
+                        <div class="bar h-[64%] flex-1 rounded-t bg-sage" style="animation-delay:.2s"></div>
+                        <div class="bar h-[57%] flex-1 rounded-t bg-sage" style="animation-delay:.25s"></div>
+                        <div class="bar h-[84%] flex-1 rounded-t bg-lime" style="animation-delay:.3s"></div>
+                        <div class="bar h-[72%] flex-1 rounded-t bg-lime" style="animation-delay:.35s"></div>
+                        <div class="bar h-[95%] flex-1 rounded-t bg-white" style="animation-delay:.4s"></div>
+                    </div>
+                    <div class="mt-5 flex items-end justify-between">
+                        <div><p class="font-mono text-[10px] uppercase tracking-widest text-white/45">Insight index</p>
+                            <p class="mt-1 font-display text-4xl font-semibold text-white">↑ 84.2%</p></div>
+                        <span class="font-mono text-xs text-lime">Q1 — Q4</span></div>
+                </div>
+            </div>
         </div>
-        <div class="fade-up relative flex min-h-[360px] items-center justify-center lg:min-h-[470px]">
-          <div class="absolute right-4 top-6 h-64 w-64 rounded-full bg-lime/55 blur-3xl"></div>
-          <div class="relative w-full max-w-[430px] rounded-[2rem] border border-white/80 bg-navy p-6 shadow-2xl shadow-navy/20 sm:p-8">
-            <div class="flex items-start justify-between"><div><p class="font-mono text-[10px] uppercase tracking-[.2em] text-white/50">Portfolio / 2026</p><p class="mt-2 text-2xl font-semibold tracking-tight text-white">Signal over noise.</p></div><div class="rounded-full bg-lime px-3 py-1 font-mono text-[10px] font-semibold text-ink">+ clarity</div></div>
-            <div class="mt-12 flex h-40 items-end gap-2 border-b border-white/15 px-1 pb-0"><div class="bar h-[28%] flex-1 rounded-t bg-white/20" style="animation-delay:.05s"></div><div class="bar h-[42%] flex-1 rounded-t bg-white/30" style="animation-delay:.1s"></div><div class="bar h-[38%] flex-1 rounded-t bg-white/25" style="animation-delay:.15s"></div><div class="bar h-[64%] flex-1 rounded-t bg-sage" style="animation-delay:.2s"></div><div class="bar h-[57%] flex-1 rounded-t bg-sage" style="animation-delay:.25s"></div><div class="bar h-[84%] flex-1 rounded-t bg-lime" style="animation-delay:.3s"></div><div class="bar h-[72%] flex-1 rounded-t bg-lime" style="animation-delay:.35s"></div><div class="bar h-[95%] flex-1 rounded-t bg-white" style="animation-delay:.4s"></div></div>
-            <div class="mt-5 flex items-end justify-between"><div><p class="font-mono text-[10px] uppercase tracking-widest text-white/45">Insight index</p><p class="mt-1 font-display text-4xl font-semibold text-white">↑ 84.2%</p></div><span class="font-mono text-xs text-lime">Q1 — Q4</span></div>
-          </div>
+        <div class="border-t border-line bg-paper/70">
+            <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 font-mono text-[10px] uppercase tracking-[.18em] text-ink/45 lg:px-10">
+                <span>Currently — Data Analyst @ Helson Software Solutions</span><span>Based in India · Open to meaningful work</span>
+            </div>
         </div>
-      </div>
-      <div class="border-t border-line bg-paper/70"><div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 font-mono text-[10px] uppercase tracking-[.18em] text-ink/45 lg:px-10"><span>Currently — Data Analyst @ Helson Software Solutions</span><span>Based in India · Open to meaningful work</span></div></div>
     </section>
 
-    <section id="about" class="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32"><div class="grid gap-14 lg:grid-cols-[.7fr_1.3fr] lg:gap-24"><div class="fade-up"><p class="font-mono text-xs uppercase tracking-[.2em] text-sage">01 / The approach</p><h2 class="mt-5 max-w-sm font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">Make the complex feel <span class="text-sage">obvious.</span></h2></div><div class="fade-up max-w-2xl text-lg leading-8 text-ink/70"><p>I work at the intersection of analysis and communication. The best dashboard is not the one with the most charts — it’s the one that helps someone ask a better question, faster.</p><p class="mt-6">My work is grounded in structured thinking, a curiosity for the “why” behind the numbers, and a strong bias toward outcomes that teams can act on.</p><div class="mt-10 grid grid-cols-2 gap-8 border-t border-line pt-6 sm:grid-cols-3"><div><p class="font-display text-3xl font-semibold">01</p><p class="mt-1 text-xs uppercase tracking-wider text-ink/45">Curiosity</p></div><div><p class="font-display text-3xl font-semibold">02</p><p class="mt-1 text-xs uppercase tracking-wider text-ink/45">Structure</p></div><div><p class="font-display text-3xl font-semibold">03</p><p class="mt-1 text-xs uppercase tracking-wider text-ink/45">Impact</p></div></div></div></div></section>
+    <section id="about" class="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+        <div class="grid gap-14 lg:grid-cols-[.7fr_1.3fr] lg:gap-24">
+            <div class="fade-up"><p class="font-mono text-xs uppercase tracking-[.2em] text-sage">01 / The approach</p>
+                <h2 class="mt-5 max-w-sm font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+                    Make the complex feel <span class="text-sage">obvious.</span></h2></div>
+            <div class="fade-up max-w-2xl text-lg leading-8 text-ink/70"><p>I work at the intersection of quantitative analysis, business questions, and communication. The best report is not the one with the most charts — it’s the one that helps someone understand performance and make a better decision, faster.</p>
+                <p class="mt-6">My work is grounded in structured problem solving, KPI and trend analysis, and a curiosity for the “why” behind the numbers. I’m building on this analytical foundation as I transition toward Finance-focused roles.</p>
+                <div class="mt-10 grid grid-cols-2 gap-8 border-t border-line pt-6 sm:grid-cols-3">
+                    <div><p class="font-display text-3xl font-semibold">01</p>
+                        <p class="mt-1 text-xs uppercase tracking-wider text-ink/45">Curiosity</p></div>
+                    <div><p class="font-display text-3xl font-semibold">02</p>
+                        <p class="mt-1 text-xs uppercase tracking-wider text-ink/45">Structure</p></div>
+                    <div><p class="font-display text-3xl font-semibold">03</p>
+                        <p class="mt-1 text-xs uppercase tracking-wider text-ink/45">Impact</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section id="experience" class="bg-navy px-6 py-24 text-white lg:px-10 lg:py-32"><div class="mx-auto max-w-7xl"><div class="fade-up flex flex-col justify-between gap-6 border-b border-white/15 pb-10 sm:flex-row sm:items-end"><div><p class="font-mono text-xs uppercase tracking-[.2em] text-lime">02 / Experience</p><h2 class="mt-5 font-display text-4xl font-semibold tracking-tight sm:text-6xl">A record of <span class="text-sage">progress.</span></h2></div><p class="max-w-xs text-sm leading-6 text-white/55">Every role is a new lens for understanding how data becomes direction.</p></div><div class="fade-up grid border-b border-white/15 py-10 md:grid-cols-[.5fr_1.5fr_.7fr] md:gap-10"><p class="font-mono text-xs text-white/45">FEB 2024 — PRESENT</p><div><h3 class="font-display text-2xl font-semibold">Data Analyst</h3><p class="mt-2 text-white/60">Helson Software Solutions Private Limited</p><p class="mt-5 max-w-xl text-sm leading-7 text-white/60">Transforming operational data into useful insight — building a stronger bridge between business questions, analysis, and action.</p></div><p class="mt-5 font-mono text-xs uppercase tracking-wider text-lime md:mt-0 md:text-right">Current role ↗</p></div><div class="grid gap-6 pt-10 sm:grid-cols-3"><div><p class="font-mono text-xs text-white/40">FOCUS</p><p class="mt-2 text-sm text-white/75">Data storytelling</p></div><div><p class="font-mono text-xs text-white/40">MINDSET</p><p class="mt-2 text-sm text-white/75">Evidence before assumption</p></div><div><p class="font-mono text-xs text-white/40">OUTPUT</p><p class="mt-2 text-sm text-white/75">Clearer decisions</p></div></div></div></section>
+    <section id="experience" class="bg-navy px-6 py-24 text-white lg:px-10 lg:py-32">
+        <div class="mx-auto max-w-7xl">
+            <div class="fade-up flex flex-col justify-between gap-6 border-b border-white/15 pb-10 sm:flex-row sm:items-end">
+                <div><p class="font-mono text-xs uppercase tracking-[.2em] text-lime">02 / Experience</p>
+                    <h2 class="mt-5 font-display text-4xl font-semibold tracking-tight sm:text-6xl">A record of <span
+                            class="text-sage">progress.</span></h2></div>
+                <p class="max-w-xs text-sm leading-6 text-white/55">Every role has strengthened my ability to connect business metrics, reporting, and analysis to clearer direction.</p></div>
+            <div class="fade-up grid border-b border-white/15 py-10 md:grid-cols-[.5fr_1.5fr_.7fr] md:gap-10"><p
+                    class="font-mono text-xs text-white/45">FEB 2024 — PRESENT</p>
+                <div><h3 class="font-display text-2xl font-semibold">Data Analyst</h3>
+                    <p class="mt-2 text-white/60">Helson Software Solutions Private Limited</p>
+                    <p class="mt-5 max-w-xl text-sm leading-7 text-white/60">Using quantitative and KPI analysis to turn operational data into useful business insight, communicate trends clearly, and support data-driven decisions.</p></div>
+                <p class="mt-5 font-mono text-xs uppercase tracking-wider text-lime md:mt-0 md:text-right">Current role
+                    ↗</p></div>
+            <div class="grid gap-6 pt-10 sm:grid-cols-3">
+                <div><p class="font-mono text-xs text-white/40">FOCUS</p>
+                    <p class="mt-2 text-sm text-white/75">KPI & performance analysis</p></div>
+                <div><p class="font-mono text-xs text-white/40">MINDSET</p>
+                    <p class="mt-2 text-sm text-white/75">Evidence before assumption</p></div>
+                <div><p class="font-mono text-xs text-white/40">OUTPUT</p>
+                    <p class="mt-2 text-sm text-white/75">Decision-ready reporting</p></div>
+            </div>
+        </div>
+    </section>
 
-    <section id="work" class="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32"><div class="fade-up flex items-end justify-between border-b border-line pb-7"><div><p class="font-mono text-xs uppercase tracking-[.2em] text-sage">03 / Selected work</p><h2 class="mt-5 font-display text-4xl font-semibold tracking-tight sm:text-6xl">Ideas with <span class="text-sage">range.</span></h2></div><span class="hidden font-mono text-xs text-ink/40 sm:block">01—03</span></div><div class="mt-10 grid gap-5 md:grid-cols-3"><article class="fade-up group rounded-3xl bg-[#e9efe1] p-7 transition hover:-translate-y-1"><div class="flex h-48 items-end justify-between rounded-2xl bg-ink p-5"><span class="font-mono text-xs text-white/50">ANALYTICS</span><span class="text-5xl text-lime">↗</span></div><p class="mt-6 font-mono text-xs uppercase tracking-wider text-ink/45">01 / Dashboard thinking</p><h3 class="mt-2 font-display text-2xl font-semibold">From rows to rhythm</h3><p class="mt-3 text-sm leading-6 text-ink/60">A considered approach to making business signals visible, readable, and useful.</p></article><article class="fade-up group rounded-3xl bg-[#e9efe1] p-7 transition hover:-translate-y-1"><div class="flex h-48 items-end justify-between rounded-2xl bg-sage p-5"><span class="font-mono text-xs text-ink/55">RESEARCH</span><span class="text-5xl text-ink">⌁</span></div><p class="mt-6 font-mono text-xs uppercase tracking-wider text-ink/45">02 / Publication</p><h3 class="mt-2 font-display text-2xl font-semibold">Research with reach</h3><p class="mt-3 text-sm leading-6 text-ink/60">A published research contribution in the IEEE digital library.</p><a class="mt-4 inline-block text-sm font-semibold underline decoration-sage decoration-2 underline-offset-4" href="https://ieeexplore.ieee.org/document/10151635" target="_blank" rel="noreferrer">Read the paper ↗</a></article><article class="fade-up group rounded-3xl bg-[#e9efe1] p-7 transition hover:-translate-y-1"><div class="flex h-48 items-end justify-between rounded-2xl bg-lime p-5"><span class="font-mono text-xs text-ink/55">BUILD</span><span class="text-5xl text-ink">＋</span></div><p class="mt-6 font-mono text-xs uppercase tracking-wider text-ink/45">03 / Continuous learning</p><h3 class="mt-2 font-display text-2xl font-semibold">Always in beta</h3><p class="mt-3 text-sm leading-6 text-ink/60">Exploring the tools and patterns that help analytical work travel further.</p><a class="mt-4 inline-block text-sm font-semibold underline decoration-sage decoration-2 underline-offset-4" href="https://github.com/nainikak19" target="_blank" rel="noreferrer">See GitHub ↗</a></article></div></section>
+    <section id="work" class="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+        <div class="fade-up flex items-end justify-between border-b border-line pb-7">
+            <div><p class="font-mono text-xs uppercase tracking-[.2em] text-sage">03 / Selected work</p>
+                <h2 class="mt-5 font-display text-4xl font-semibold tracking-tight sm:text-6xl">Ideas with <span
+                        class="text-sage">range.</span></h2></div>
+            <span class="hidden font-mono text-xs text-ink/40 sm:block">01—03</span></div>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+            <article class="fade-up group rounded-3xl bg-[#e9efe1] p-7 transition hover:-translate-y-1">
+                <div class="relative flex h-48 items-end justify-between overflow-hidden rounded-2xl bg-ink p-5"><div class="absolute inset-x-8 bottom-11 top-8 flex items-end gap-2 border-b border-white/15" aria-hidden="true"><span class="h-[30%] flex-1 rounded-t bg-white/20"></span><span class="h-[48%] flex-1 rounded-t bg-white/30"></span><span class="h-[40%] flex-1 rounded-t bg-sage/80"></span><span class="h-[68%] flex-1 rounded-t bg-sage"></span><span class="h-[86%] flex-1 rounded-t bg-lime"></span><span class="h-[72%] flex-1 rounded-t bg-lime/80"></span></div><span
+                        class="font-mono text-xs text-white/50">ANALYTICS</span><span
+                        class="text-5xl text-lime">↗</span></div>
+                <p class="mt-6 font-mono text-xs uppercase tracking-wider text-ink/45">01 / Dashboard thinking</p>
+                <h3 class="mt-2 font-display text-2xl font-semibold">From rows to rhythm</h3>
+                <p class="mt-3 text-sm leading-6 text-ink/60">A considered approach to making business metrics, performance signals, and trends visible, readable, and useful.</p>
+                <div class="mt-6 border-t border-ink/10 pt-5"><p class="font-mono text-xs uppercase tracking-wider text-ink/45">Projects</p>
+                    <div class="mt-3 flex flex-col gap-2"><a href="https://docs.google.com/spreadsheets/d/1P-IGKyJatYEBXWK4Zyc2d9BdH2vXgLEn/edit?usp=sharing&amp;ouid=108439125364002756987&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold underline decoration-sage decoration-2 underline-offset-4 hover:text-sage">Paradeep-Valuation Model ↗</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1j7r3g7HJ-_bpssUOY_CQXVC-YaaGkaZQ/edit?usp=sharing&amp;ouid=108439125364002756987&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold underline decoration-sage decoration-2 underline-offset-4 hover:text-sage">Tata Motors Financial Model ↗</a></div></div></article>
+            <article class="fade-up group rounded-3xl bg-[#e9efe1] p-7 transition hover:-translate-y-1">
+                <div class="relative flex h-48 items-end justify-between overflow-hidden rounded-2xl bg-sage p-5"><svg class="absolute inset-x-8 top-10 h-24 w-[calc(100%-4rem)]" viewBox="0 0 240 96" fill="none" aria-hidden="true"><path d="M2 78L42 63L76 68L112 42L148 50L184 23L238 8" stroke="#14231e" stroke-opacity=".6" stroke-width="3"/><path d="M2 78L42 63L76 68L112 42L148 50L184 23L238 8V96H2V78Z" fill="#f6f7f2" fill-opacity=".2"/></svg><span
+                        class="font-mono text-xs text-ink/55">RESEARCH</span><span class="text-5xl text-ink">⌁</span>
+                </div>
+                <p class="mt-6 font-mono text-xs uppercase tracking-wider text-ink/45">02 / Publication</p>
+                <h3 class="mt-2 font-display text-2xl font-semibold">Research with reach</h3>
+                <p class="mt-3 text-sm leading-6 text-ink/60">A published research contribution in the IEEE digital
+                    library, reflecting careful research, quantitative thinking, and clear communication.</p><a
+                    class="mt-4 inline-block text-sm font-semibold underline decoration-sage decoration-2 underline-offset-4"
+                    href="https://ieeexplore.ieee.org/document/10151635" target="_blank" rel="noreferrer">Read the paper
+                ↗</a></article>
+            <article class="fade-up group rounded-3xl bg-[#e9efe1] p-7 transition hover:-translate-y-1">
+                <div class="relative flex h-48 items-end justify-between overflow-hidden rounded-2xl bg-lime p-5"><div class="absolute inset-x-8 top-8 grid grid-cols-2 gap-2" aria-hidden="true"><div class="rounded-xl border border-ink/15 bg-white/20 p-3"><span class="block font-mono text-[9px] uppercase tracking-wider text-ink/50">KPI</span><span class="mt-2 block font-display text-xl font-semibold text-ink">84.2</span></div><div class="rounded-xl border border-ink/15 bg-white/20 p-3"><span class="block font-mono text-[9px] uppercase tracking-wider text-ink/50">Trend</span><span class="mt-2 block font-display text-xl font-semibold text-ink">↑ 12%</span></div></div><span
+                        class="font-mono text-xs text-ink/55">BUILD</span><span class="text-5xl text-ink">＋</span></div>
+                <p class="mt-6 font-mono text-xs uppercase tracking-wider text-ink/45">03 / Continuous learning</p>
+                <h3 class="mt-2 font-display text-2xl font-semibold">Always in beta</h3>
+                <p class="mt-3 text-sm leading-6 text-ink/60">Continuing to develop the analytical thinking and structured problem solving that help business insights travel further.</p></article>
+        </div>
+    </section>
 
-    <section id="contact" class="mx-6 mb-8 overflow-hidden rounded-[2rem] bg-ink px-7 py-16 text-white sm:px-12 lg:mx-10 lg:px-20 lg:py-20"><div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end"><div><p class="font-mono text-xs uppercase tracking-[.2em] text-lime">04 / Contact</p><h2 class="mt-5 max-w-2xl font-display text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">Let’s make the<br><span class="text-sage">numbers matter.</span></h2></div><div><a href="mailto:nainikapkaware19@gmail.com" class="inline-flex rounded-full bg-lime px-6 py-3 text-sm font-semibold text-ink transition hover:bg-white">Email Nainika ↗</a><p class="mt-4 font-mono text-xs text-white/45">nainikapkaware19@gmail.com</p></div></div></section>
-  </main>
-  <footer class="mx-auto flex max-w-7xl flex-col gap-4 px-6 pb-8 pt-4 text-xs text-ink/45 sm:flex-row sm:items-center sm:justify-between lg:px-10"><span>© 2026 Nainika Kaware</span><div class="flex gap-5"><a href="https://www.linkedin.com/in/nainikakaware1910/" target="_blank" rel="noreferrer" class="hover:text-ink">LinkedIn</a><a href="https://github.com/nainikak19" target="_blank" rel="noreferrer" class="hover:text-ink">GitHub</a>
-<!--      <a href="https://leetcode.com/u/Shimbhu77/" target="_blank" rel="noreferrer" class="hover:text-ink">LeetCode</a>-->
-  </div></footer>
-  <script src="script.js"></script>
+    <section id="contact"
+             class="mx-6 mb-8 overflow-hidden rounded-[2rem] bg-ink px-7 py-16 text-white sm:px-12 lg:mx-10 lg:px-20 lg:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div><p class="font-mono text-xs uppercase tracking-[.2em] text-lime">04 / Contact</p>
+                <h2 class="mt-5 max-w-2xl font-display text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
+                    Let’s make the<br><span class="text-sage">numbers matter.</span></h2></div>
+            <div><a href="mailto:nainikapkaware19@gmail.com"
+                    class="inline-flex rounded-full bg-lime px-6 py-3 text-sm font-semibold text-ink transition hover:bg-white">Email
+                Nainika ↗</a>
+                <p class="mt-4 font-mono text-xs text-white/45">nainikapkaware19@gmail.com</p>
+                <div class="mt-6 flex gap-5 text-sm font-semibold"><a href="https://www.linkedin.com/in/nainikakaware1910/" target="_blank" rel="noopener noreferrer" class="underline decoration-sage decoration-2 underline-offset-4 hover:text-lime" aria-label="Nainika Kaware on LinkedIn">LinkedIn ↗</a><a href="https://github.com/nainikak19" target="_blank" rel="noopener noreferrer" class="underline decoration-sage decoration-2 underline-offset-4 hover:text-lime" aria-label="Nainika Kaware on GitHub">GitHub ↗</a></div></div>
+        </div>
+    </section>
+</main>
+<footer class="mx-auto flex max-w-7xl flex-col gap-4 px-6 pb-8 pt-4 text-xs text-ink/45 sm:flex-row sm:items-center sm:justify-between lg:px-10">
+    <span>© 2026 Nainika Kaware</span>
+    <span>Analytics grounded in business thinking.</span>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
