@@ -18,11 +18,14 @@ document.querySelectorAll('[data-resume-link]').forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
 
-    const resumeUrl = link.href;
-    window.open(resumeUrl, '_blank', 'noopener,noreferrer');
+    const resumeId = '12uRN3o06KfQl-pOXjODH5BQ2NaW8ECm7';
+    const resumeViewUrl = `https://drive.google.com/file/d/${resumeId}/view?usp=sharing`;
+    const resumeDownloadUrl = `https://drive.google.com/uc?export=download&id=${resumeId}`;
+
+    window.open(resumeViewUrl, '_blank', 'noopener,noreferrer');
 
     const downloadLink = document.createElement('a');
-    downloadLink.href = resumeUrl;
+    downloadLink.href = resumeDownloadUrl;
     downloadLink.download = 'Nainika-Kaware-Resume.pdf';
     downloadLink.style.display = 'none';
     document.body.appendChild(downloadLink);
